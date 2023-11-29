@@ -6,22 +6,29 @@
   "author": "Digital H GmbH",
   "scripts": {
     "build": "nest build",
+    "build:docker": "npm run pack-lib && docker build -t $NAME-service .",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format:staged": "prettier --write",
+    "dev": "npm run start:dev",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint:staged": "eslint --ext .ts --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/jest/bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "get-lib": "npm link ../../../lib/dist",
+    "pack-lib": "npm pack ../../../lib/dist"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
+    "lib": "file:../../../lib/dist",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
