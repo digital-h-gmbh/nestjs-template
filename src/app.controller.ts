@@ -1,5 +1,4 @@
 import { Controller, Get, Header } from '@nestjs/common';
-import { config } from './config';
 
 @Controller()
 export class AppController {
@@ -13,7 +12,7 @@ export class AppController {
 | | \\ \\ _| |_| |__| | |____ 
 |_|  \\_\\_____|_____/|______|
 
-       ${config.serviceName}-Service
+       $NAME-Service
 `;
   }
 }
