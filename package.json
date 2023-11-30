@@ -29,6 +29,9 @@
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "lib": "file:../../../lib/dist",
+    "nestjs-pino": "^3.5.0",
+    "pino-http": "^8.5.1",
+    "pino-pretty": "^10.2.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
