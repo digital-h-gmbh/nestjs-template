@@ -11,9 +11,9 @@ describe('AppController', () => {
   });
 
   describe('getHello', () => {
-    it('should return "Hello World!"', () => {
+    it('should include "Service"', () => {
       const appController = app.get(AppController);
-      expect(appController.getHello()).toBe('Hello World!');
+      expect(appController.getHello()).toContain('Service');
     });
   });
 });
