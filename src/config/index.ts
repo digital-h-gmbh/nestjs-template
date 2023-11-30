@@ -12,7 +12,6 @@ const map = {
 };
 
 export const config = map[env];
-export const isProduction = env === 'production';
 
 // TODO: Replace this with importing `import { Environments } from 'lib';`
 type Environments = 'local' | 'staging' | 'production';
